@@ -93,7 +93,7 @@ In the code, you'll find:
 float setpoint = 0.35;
 ```
 
-This is the **target pitch angle** the robot aims to maintain. You may slightly adjust this value depending on your robot’s physical center of mass. You can find this value by running `pitch_offset_calibration.ino`.
+This is the **target pitch angle** the robot aims to maintain. You may slightly adjust this value depending on your robot’s physical center of mass. You can find this value by running `setpoint_calc.ino`.
 
 ---
 
