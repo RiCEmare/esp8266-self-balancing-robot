@@ -126,7 +126,7 @@ No need to re-upload code — **PID gains can be updated via the Serial Monitor*
 
 ## 👨‍💻 Contributors
 
-- [Ashish Adhikari](https://github.com/Aashish1-1-1)
+- [Aashish Adhikari](https://github.com/Aashish1-1-1)
 - [Swastik Aryal](https://github.com/Swastik-Aryal)
 - [James Bhattarai](https://github.com/jamesii-b)
 - [Rikesh Panta](https://github.com/RiCEmare)
