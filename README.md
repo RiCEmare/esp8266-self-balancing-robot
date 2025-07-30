@@ -4,57 +4,65 @@ A two-wheeled self-balancing robot modeled as an inverted pendulum and stabilize
 
 ---
 
+## Demo
+
+## ![demo](/images/demo.gif)
+
+---
+
 ## 🧠 System Overview
 
 This robot continuously reads its tilt using an MPU6050 sensor and adjusts the speed and direction of its motors to maintain upright balance. It uses a closed-loop PID control system:
 
-- **Kp (Proportional):** 40.0  
-- **Ki (Integral):** 180.0  
-- **Kd (Derivative):** 2.0  
+- **Kp (Proportional):** 40.0
+- **Ki (Integral):** 180.0
+- **Kd (Derivative):** 2.0
 
 ---
 
 ## 🧾 Components
 
-| Component               | Quantity | Notes                                      |
-|-------------------------|----------|--------------------------------------------|
-| ESP8266 NodeMCU         | 1        | The main microcontroller                   |
-| MPU6050 IMU             | 1        | Accelerometer + Gyroscope for orientation  |
-| L298N Motor Driver      | 1        | Controls the two DC motors                 |
-| 6V DC Geared Motors     | 2        | With wheels                                |
-| 2596 Buck Converter     | 1        | Steps down voltage for NodeMCU             |
-| 18650 Li-ion Batteries  | 4        | 2 for motors, 2 (via buck) for NodeMCU     |
-| Robot Chassis           | 1        | Two-layered chassis                        |
-| Jumper Wires            | –        | For all electrical connections             |
-
-
-
+| Component              | Quantity | Notes                                     |
+| ---------------------- | -------- | ----------------------------------------- |
+| ESP8266 NodeMCU        | 1        | The main microcontroller                  |
+| MPU6050 IMU            | 1        | Accelerometer + Gyroscope for orientation |
+| L298N Motor Driver     | 1        | Controls the two DC motors                |
+| 6V DC Geared Motors    | 2        | With wheels                               |
+| 2596 Buck Converter    | 1        | Steps down voltage for NodeMCU            |
+| 18650 Li-ion Batteries | 4        | 2 for motors, 2 (via buck) for NodeMCU    |
+| Robot Chassis          | 1        | Two-layered chassis                       |
+| Jumper Wires           | –        | For all electrical connections            |
 
 ## 🖼️ Diagrams
 
 ### 📷 Circuit Diagram
+
 ![Circuit Diagram](images/circuit_diagram.png)
 
 ### Key Connections (ESP8266 NodeMCU):
 
 #### MPU6050:
-- SDA → D7 (GPIO 13)  
+
+- SDA → D7 (GPIO 13)
 - SCL → D6 (GPIO 12)
 
 #### L298N Motor Driver:
-- ENA → D6 (GPIO 14)  
-- IN1 → D4 (GPIO 2)  
-- IN2 → D3 (GPIO 0)  
-- IN3 → D8 (GPIO 15)  
-- IN4 → D0 (GPIO 16)  
+
+- ENA → D6 (GPIO 14)
+- IN1 → D4 (GPIO 2)
+- IN2 → D3 (GPIO 0)
+- IN3 → D8 (GPIO 15)
+- IN4 → D0 (GPIO 16)
 - ENB → D2 (GPIO 4)
 
 ---
 
 #### 1️⃣ Hardware Layout – Top View
+
 ![Hardware Diagram 1](images/hardware_diagram1.png)
 
 #### 2️⃣ Hardware Layout – Side View
+
 ![Hardware Diagram 2](images/hardware_diagram2.png)
 
 ---
@@ -64,6 +72,7 @@ This robot continuously reads its tilt using an MPU6050 sensor and adjusts the s
 This project is developed using the **Arduino IDE**.
 
 ### Libraries Used:
+
 - `Adafruit_MPU6050`
 - `Adafruit Unified Sensor`
 - `Wire` (standard)
@@ -80,8 +89,8 @@ Install them using:
 3. Select board: **ESP8266 Dev Module**.
 4. Upload the sketch to your NodeMCU.
 5. Calibrate the robot to maintain vertical postion by tuning the PID values.
-5. Disconnect USB and power the board via batteries.
-6. Carefully place the robot upright and gently let go.
+6. Disconnect USB and power the board via batteries.
+7. Carefully place the robot upright and gently let go.
 
 ---
 
@@ -115,12 +124,11 @@ No need to re-upload code — **PID gains can be updated via the Serial Monitor*
 
 ---
 
-
 ## 👨‍💻 Contributors
 
-- [Ashish Adhikari](https://github.com/Aashish1-1-1)  
-- [Swastik Aryal](https://github.com/Swastik-Aryal)  
-- [James Bhattarai](https://github.com/jamesii-b)  
+- [Aashish Adhikari](https://github.com/Aashish1-1-1)
+- [Swastik Aryal](https://github.com/Swastik-Aryal)
+- [James Bhattarai](https://github.com/jamesii-b)
 - [Rikesh Panta](https://github.com/RiCEmare)
 
 ---
